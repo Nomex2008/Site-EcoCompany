@@ -4,3 +4,30 @@ body {
     font-family: Rubik;
     font-size: 14px;
 }
+.wrapper{
+    min-height: 100%;
+    overflow: clip;
+
+    display: flex;
+    flex-direction: column;
+}
+.page{
+    flex: 1 1 auto;
+}
+/*seatings adaptive*/
+[class*="__container"]{
+    max-width: 840px;
+    padding: 0 15px;
+
+    margin: 0 auto;
+}
+/*moduls*/
+.title{
+    color: #fff;
+    font-family: Merriweather;
+    font-size: 30px;
+}
+.title--dark{
+    color: #222f33;
+}
+/*main style*/
