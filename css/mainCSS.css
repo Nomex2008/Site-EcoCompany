@@ -91,7 +91,7 @@ body {
 
     /* Label / Medium */
     font-family: Rubik;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -106,18 +106,69 @@ body {
 .main-section {
     min-height: 100vh;
     position: relative;
+    display: flex;  
 }
 .main-section__container {
-}
-.main-section__content {
+    padding-top: 5.375rem;
+    padding-bottom: 1.875rem;
+    position: relative;
+    z-index: 1;
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: 50.320988% 1fr;
+    align-items: center;
 }
 .main-section__label {
-}
-.main-section__title {
-}
-.title {
+    margin-bottom: 0.75rem;
+
+    color: #FFF;
+
+    /* Label / Bold */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 .main-section__video-link {
+    justify-self: center;
+
+    color: #FFF;
+
+    /* Label / Medium */
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    transition: all .3s;
+}
+.main-section__video-link::before{
+    content: '';
+    height: 32px;
+    width: 32px;
+    flex: 0 0 32px;
+    border-radius: 50%;
+    background: url('../img/main/BTN\ Play.svg') left no-repeat;
+}
+.main-section__video-link:hover{
+    color: #606B74;
+}
+@media(max-width:43.75rem){
+    .main-section__container {
+        grid-template-columns: 60% 1fr;
+    }
+}
+@media(max-width:31.25rem){
+    .main-section__container {
+        grid-template-columns: auto;
+        align-content: center;
+        gap: 40px;
+    }
 }
 .main-section__image {
     position: absolute;
@@ -125,7 +176,8 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    right: 20px;
+    
+    background-color: #000;
 }
 .main-section__image img{
     position: absolute;
@@ -134,4 +186,9 @@ body {
     top: 0;
     left: 0;
     object-fit: cover;
+}
+@media(max-width:43.75rem){
+    .main-section__image img{
+        opacity: .6;
+    }
 }
