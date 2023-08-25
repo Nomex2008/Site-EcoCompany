@@ -360,6 +360,7 @@ body {
 /*swiper*/
 .swiper{
     overflow: hidden;
+    cursor: pointer;
 }
 .swiper-initialized{
     touch-action: pan-y;
@@ -464,5 +465,66 @@ body {
 @media (max-width:360px){
     .info__content{
         grid-template-columns: auto;
+    }
+}
+/*footer*/
+.footer {
+    background-color: #222F33;
+    padding: 33px 0;
+}
+.footer__container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.footer__mail {
+    display: flex;
+    align-items: center;
+
+    color: #FFF;
+
+    /* Label / Medium */
+    font-family: Rubik;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    opacity: .6;
+}
+.footer__mail:hover{
+    text-decoration: underline;
+}
+    
+.footer__logo {
+    justify-self: center;
+}
+.footer__menu {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    column-gap: 30px;
+}
+.menu-footer__link {
+    color: #FFF;
+
+    /* Label / Medium */
+    font-family: Rubik;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    opacity: .6;
+}
+.menu-footer__link:hover{
+    text-decoration: underline;
+}
+@media (max-width:600px) {
+    .footer__container {
+        grid-template-columns: auto;
+        justify-content: center;
+        text-align: center;
+        row-gap: 20px;
+    }
+    .footer__mail {
+         margin: 0 auto;
     }
 }
