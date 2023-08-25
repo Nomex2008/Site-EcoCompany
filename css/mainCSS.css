@@ -52,11 +52,17 @@ body {
 
 /*header*/
 .header {
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 50;
+    background-color: none;
+    transition: all .3s;
+}
+.header.scroll{
+    background-color: #222F33;
+    opacity: .9;
 }
 .header__container {
     display: flex;
